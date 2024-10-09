@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>La mia Pagina GitHub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista della Spesa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Benvenuti sulla mia pagina!</h1>
-    <p>Questa è una semplice pagina HTML ospitata su GitHub.</p>
+    <h1>Lista della Spesa</h1>
+    <ul>
+        <li>Latte</li>
+        <li>Uova</li>
+        <li>Pane</li>
+        <li>Frutta</li>
+        <li>Verdura</li>
+    </ul>
 </body>
 </html>
