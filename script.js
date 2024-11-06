@@ -1,9 +1,13 @@
+// Cambia automaticamente il titolo della pagina
+document.title = 'Nuovo Titolo della Pagina';
+console.log('Ciao, questo è il mio primo messaggio dalla console in un file esterno!');
+
 // Seleziona la lista e il bottone
 const lista = document.getElementById('lista');
 const bottone = document.getElementById('aggiungiBottone');
 const input = document.getElementById('nuovoElemento');
 
-// Aggiungi un evento di click al bottone
+// Aggiungi un evento di clic al bottone
 bottone.addEventListener('click', () => {
     // Ottieni il testo dall'input
     const testoNuovoElemento = input.value;
@@ -13,7 +17,7 @@ bottone.addEventListener('click', () => {
         nuovoElemento.textContent = testoNuovoElemento;
         // Aggiungi il nuovo elemento alla lista
         lista.appendChild(nuovoElemento);
-        // Resetta il campo input
+        // Ripristina il campo di input
         input.value = '';
     }
 });
