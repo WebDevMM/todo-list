@@ -2,18 +2,22 @@
 document.title = 'Nuovo Titolo della Pagina';
 console.log('Ciao, questo è il mio primo messaggio dalla console in un file esterno!');
 
-// Funzione per aggiungere un nuovo elemento alla lista
-function aggiungiElemento() {
-    // Seleziona la lista esistente
-    const lista = document.getElementById('lista');
-    
-    // Crea un nuovo elemento di lista
-    const nuovoElemento = document.createElement('li');
-    nuovoElemento.textContent = 'Nuovo Elemento'; // Il testo del nuovo elemento
-    
-    // Aggiungi il nuovo elemento alla lista
-    lista.appendChild(nuovoElemento);
-}
+// Seleziona la lista e il bottone
+const lista = document.getElementById('lista');
+const bottone = document.getElementById('aggiungiBottone');
+const input = document.getElementById('nuovoElemento');
 
-// Chiama la funzione per aggiungere l'elemento al caricamento della pagina
-aggiungiElemento();
+// Aggiungi un evento di clic al bottone
+bottone.addEventListener('click', () => {
+    // Ottieni il testo dall'input
+    const testoNuovoElemento = input.value;
+    // Crea un nuovo elemento di lista solo se c'è testo
+    if (testoNuovoElemento !== '') {
+        const nuovoElemento = document.createElement('li');
+        nuovoElemento.textContent = testoNuovoElemento;
+        // Aggiungi il nuovo elemento alla lista
+        lista.appendChild(nuovoElemento);
+        // Ripristina il campo di input
+        input.value = '';
+    }
+});
